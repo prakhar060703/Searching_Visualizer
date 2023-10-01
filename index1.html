@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<header>
+    <h1 align="center">Searching Visualizer</h1>
+    <nav>
+        <div class="row">
+            <div class="col gap-2 d-sm-flex" id="newArray">
+                <button type="button" class="btn btn-outline-success btn-dark newArray">New Array</button>
+            </div>
+            
+            <div style="margin-left: -190px;" class="col gap-2 d-sm-flex justify-content-end">
+
+                <button type="button" class="btn btn-outline-primary btn-dark linearSearch">Linear Search</button>
+                <button type="button" class="btn btn-outline-primary btn-dark binarySearch">Binary Search</button>
+                <button id="clr" onclick="saraja(event)" type="button" class="btn btn-outline-primary btn-dark reset">Clear</button>
+                                
+            </div>
+            
+            <div  style="margin-left:3px;" class="col" id="input">
+                <span style="margin-right:-181px;" id="size">Size
+                    <input id="arr_sz" type="range" min="5" max="100" step=1 value=30>
+                </span>
+                <span id="speed">Speed
+                    <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
+                </span>
+                
+                
+            </div>
+        </div>
+    </nav>
+    <span id="praja">Enter the number you want to search
+        <input value="" onchange="changeme(event)" id="user_input" type="number">
+        
+    </span>
+    <div id="baba"></div>
+</header>
+<body class="p-3 mb-2 bg-dark text-white">
+    
+    <div id="bars" class="flex-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js_files/searching.js"></script>
+    <script src="js_files/binarySearch.js"></script>
+    <script src="js_files/linearSearch.js"></script>
+</body>
+</html>
